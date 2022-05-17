@@ -4,17 +4,23 @@ import tw from 'tailwind-styled-components';
 const ModalWrapStyle = tw.div`
     bg-black
     bg-opacity-50
-    absolute
+    fixed
     top-0
     w-full
     h-screen
     z-10
+    flex
 `
 
-const ModalWrap = ({ children, on }) => {
+const ModalWrap = ({ children, on, onClick }) => {
+    const closeModal = (e) => {
+        if (e.target !== e.currentTarget) return
+        onClick()
+    }
+
     return (
         <>
-            {on && <ModalWrapStyle>{children}</ModalWrapStyle>}
+            {on && <ModalWrapStyle onClick={closeModal}>{children}</ModalWrapStyle>}
         </>
     )
 
