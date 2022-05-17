@@ -2,7 +2,7 @@ import React from 'react';
 import { IconBtn } from '@/styles'
 import { AiOutlineClose } from "react-icons/ai";
 import { HeaderInput } from '@/components/template/Home';
-import SearchList from "./SearchList"
+import SearchList from "../SearchList"
 
 const MoSearchModal = ({ on, closer }) => {
     const [list, setList] = React.useState([]);
@@ -33,7 +33,7 @@ const MoSearchModal = ({ on, closer }) => {
                             onChange={getList}
                             autoFocus />
                     </HeaderInput>
-                    <ul className='px-3 py-2'>
+                    <ul className='px-3 py-2 flex flex-col gap-2'>
                         {list.map((ele) => <SearchList key={ele.id} data={ele}>{ele.name}</SearchList>)}
                     </ul>
                 </div>
