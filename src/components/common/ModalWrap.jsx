@@ -15,6 +15,7 @@ const ModalWrapStyle = tw.div`
 const ModalWrap = ({ children, on, onClick }) => {
     const closeModal = (e) => {
         if (e.target !== e.currentTarget) return
+        e.preventDefault();
         onClick()
     }
 

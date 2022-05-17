@@ -1,20 +1,26 @@
 import React, { useState } from 'react';
-import { Header, ModalWrap, ModalBar } from '../common';
+import { Header, ModalWrap, ModalBar, MoSearchModal } from '../common';
 import { HeaderInput } from './Home';
 
 const HomeLayout = () => {
-    const [modal, setModal] = useState(false)
-    const modalOpen = () => {
-        setModal(!modal)
+    const [barOpen, setBarOpen] = useState(false)
+    const [searchOpen, setSearchOpen] = useState(false)
+
+    const modalOpener = () => {
+        setBarOpen(!barOpen)
     }
+
+    const searchOpener = () => {
+        setSearchOpen(!searchOpen)
+    }
+
     return (
         <div className='wrap'>
-            <ModalWrap on={modal} onClick={modalOpen}>
-                <ModalBar>
-                    <div onClick={modalOpen}>닫기</div>
-                </ModalBar>
+            <MoSearchModal on={searchOpen} closer={searchOpener} />
+            <ModalWrap on={barOpen} onClick={modalOpener}>
+                <ModalBar />
             </ModalWrap>
-            <Header onModal={modalOpen} />
+            <Header onModal={modalOpener} onSearch={searchOpener} />
             <HeaderInput />
         </div>
     )
