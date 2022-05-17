@@ -5,3 +5,8 @@ export const IconBtn = tw.div`
     px-3
     py-4
 `
+
+export const DeskTopWrap = tw.div`
+    max-w-[1200px]
+    m-auto
+`
