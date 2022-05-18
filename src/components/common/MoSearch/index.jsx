@@ -20,7 +20,7 @@ const MoSearchModal = ({ on, closer }) => {
     return (
         <>
             {on &&
-                <div className='w-full h-full fixed bg-white'>
+                <div className='w-full h-full fixed bg-white z-10'>
                     <IconBtn onClick={closer}>
                         <AiOutlineClose size='24' color='#444444' />
                     </IconBtn>

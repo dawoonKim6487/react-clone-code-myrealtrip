@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Header, ModalWrap, ModalBar, MoSearchModal } from '@/components/common';
 import { SearchInput } from "@/components/common"
 import HomeBanner from './HomeBanner';
+import MoNav from './MoNav';
 
 const HomeLayout = () => {
     const [barOpen, setBarOpen] = useState(false)
@@ -28,7 +29,9 @@ const HomeLayout = () => {
                 </SearchInput>
             </div>
             <HomeBanner />
-
+            <div className='lg:hidden'>
+                <MoNav />
+            </div>
         </div>
     )
 

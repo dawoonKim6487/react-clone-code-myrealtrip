@@ -5,6 +5,23 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const Slider = () => {
+    const SliderData = [
+        {
+            id: 0, name: '파리', background: "", etc: true, count: 550
+        },
+        {
+            id: 1, name: '라스베가스', background: "", etc: false, count: 650
+        },
+        {
+            id: 2, name: '제주도', background: "", etc: true, count: 700
+        },
+        {
+            id: 3, name: '베트남', background: "", etc: false, count: 2200
+        },
+        {
+            id: 4, name: '서울', background: "", etc: false, count: 2850
+        }
+    ]
     return (
         <>
             <div>
@@ -19,7 +36,7 @@ const Slider = () => {
                             slidesPerView: 1.8,
                         },
                         620: {
-                            slidesPerView: 3,
+                            slidesPerView: 2.8,
                         },
                         1024: {
                             slidesPerView: 4,
@@ -27,15 +44,13 @@ const Slider = () => {
                     }}
                     className="mySwiper"
                 >
-                    <SwiperSlide><Slide>12</Slide></SwiperSlide>
-                    <SwiperSlide><Slide>12</Slide></SwiperSlide>
-                    <SwiperSlide><Slide>12</Slide></SwiperSlide>
-                    <SwiperSlide><Slide>12</Slide></SwiperSlide>
-                    <SwiperSlide><Slide>12</Slide></SwiperSlide>
-                    <SwiperSlide><Slide>12</Slide></SwiperSlide>
-                    <SwiperSlide><Slide>12</Slide></SwiperSlide>
-                    <SwiperSlide><Slide>12</Slide></SwiperSlide>
-                    <SwiperSlide><Slide>12</Slide></SwiperSlide>
+                    {SliderData.map((ele) => {
+                        return (
+                            <SwiperSlide key={ele.id}>
+                                <Slide data={ele}>{ele.name}</Slide>
+                            </SwiperSlide>
+                        )
+                    })}
                 </Swiper>
             </div>
         </>
