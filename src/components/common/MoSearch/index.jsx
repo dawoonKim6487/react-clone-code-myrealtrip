@@ -1,8 +1,7 @@
 import React from 'react';
 import { IconBtn } from '@/styles'
 import { AiOutlineClose } from "react-icons/ai";
-import { HeaderInput } from '@/components/template/Home';
-import SearchList from "../SearchList"
+import { SearchList, SearchInput } from "@/components/common"
 
 const MoSearchModal = ({ on, closer }) => {
     const [list, setList] = React.useState([]);
@@ -25,15 +24,15 @@ const MoSearchModal = ({ on, closer }) => {
                     <IconBtn onClick={closer}>
                         <AiOutlineClose size='24' color='#444444' />
                     </IconBtn>
-                    <HeaderInput>
+                    <SearchInput>
                         <input
                             type="text"
                             className='flex-1 bg-transparent outline-none placeholder:text-sm'
                             placeholder='도시나 상품을 검색해보세요'
                             onChange={getList}
                             autoFocus />
-                    </HeaderInput>
-                    <ul className='px-3 py-2 flex flex-col gap-2'>
+                    </SearchInput>
+                    <ul>
                         {list.map((ele) => <SearchList key={ele.id} data={ele}>{ele.name}</SearchList>)}
                     </ul>
                 </div>

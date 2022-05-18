@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Header, ModalWrap, ModalBar, MoSearchModal } from '../common';
-import { HeaderInput } from './Home';
+import { Header, ModalWrap, ModalBar, MoSearchModal } from '@/components/common';
+import { SearchInput } from "@/components/common"
+import HomeBanner from './HomeBanner';
 
 const HomeLayout = () => {
     const [barOpen, setBarOpen] = useState(false)
@@ -21,9 +22,13 @@ const HomeLayout = () => {
                 <ModalBar />
             </ModalWrap>
             <Header onModal={modalOpener} onSearch={searchOpener} />
-            <HeaderInput>
-                <input type="text" className='flex-1 bg-transparent outline-none placeholder:text-sm' placeholder='도시나 상품을 검색해보세요' onFocus={searchOpener} />
-            </HeaderInput>
+            <div className='lg:hidden'>
+                <SearchInput>
+                    <input type="text" className='flex-1 bg-transparent outline-none placeholder:text-sm' placeholder='도시나 상품을 검색해보세요' onFocus={searchOpener} />
+                </SearchInput>
+            </div>
+            <HomeBanner />
+
         </div>
     )
 

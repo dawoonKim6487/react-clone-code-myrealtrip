@@ -1,8 +1,7 @@
 import React from 'react';
 import { DeskTopWrap } from '@/styles'
 import tw from 'tailwind-styled-components';
-import { HeaderInput } from '@/components/template/Home';
-import SearchList from "../SearchList"
+import { SearchList, SearchInput } from "@/components/common"
 
 const NavStyle = tw.li`
     pb-2
@@ -47,15 +46,15 @@ const LgHead = () => {
                     <div className='flex items-center flex-1'>
                         <h1 className='text-2xl'>MyTripLogo</h1>
                         <div className='flex-1 relative'>
-                            <HeaderInput>
+                            <SearchInput>
                                 <input type="text"
                                     className='flex-1 bg-transparent outline-none placeholder:text-sm'
                                     placeholder='도시나 상품을 검색해보세요'
                                     onChange={InputData}
                                 />
-                            </HeaderInput>
+                            </SearchInput>
                             <div className='absolute w-full px-3'>
-                                {list.length > 0 && <ul className='bg-white p-1 py-2 rounded drop-shadow-lg border flex flex-col gap-2'>
+                                {list.length > 0 && <ul className='bg-white rounded drop-shadow-lg border overflow-hidden'>
                                     {list.map((ele) => <SearchList key={ele.id} data={ele}>{ele.name}</SearchList>)}
                                 </ul>}
                             </div>

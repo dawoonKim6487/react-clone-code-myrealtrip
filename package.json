@@ -9,6 +9,7 @@
     "lint": "eslint \"**/*.{js,jsx}\""
   },
   "dependencies": {
+    "@trendyol-js/react-carousel": "^2.0.1",
     "eslint": "^8.15.0",
     "eslint-plugin-react": "^7.29.4",
     "lint": "^0.7.0",
@@ -16,6 +17,8 @@
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.3.0",
+    "react-slick": "^0.29.0",
+    "swiper": "^8.1.5",
     "tailwind-styled-components": "^2.1.7"
   },
   "devDependencies": {
