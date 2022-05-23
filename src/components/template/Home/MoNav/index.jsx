@@ -15,8 +15,6 @@ const NavIcon = tw.div`
     bg-slate-100
     rounded
 `
-const NavTitle = tw.span`
-`
 
 
 const MoNav = () => {

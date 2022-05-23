@@ -5,11 +5,12 @@ import HomeBanner from './HomeBanner';
 import MoNav from './MoNav';
 import HomeSlider from './HomeSlider';
 import { DeskTopWrap } from '@/styles'
-
+import ScrollList from './ScrollList';
 
 const HomeLayout = () => {
-    const [barOpen, setBarOpen] = useState(false)
-    const [searchOpen, setSearchOpen] = useState(false)
+    const [barOpen, setBarOpen] = useState(false);
+    const [searchOpen, setSearchOpen] = useState(false);
+
 
     const modalOpener = () => {
         setBarOpen(!barOpen)
@@ -20,7 +21,7 @@ const HomeLayout = () => {
     }
 
     return (
-        <div className='wrap'>
+        <>
             <MoSearchModal on={searchOpen} closer={searchOpener} />
             <ModalWrap on={barOpen} onClick={modalOpener}>
                 <ModalBar />
@@ -37,6 +38,7 @@ const HomeLayout = () => {
                 <HomeBanner />
             </DeskTopWrap>
 
+
             <DeskTopWrap className='lg:hidden'>
                 <MoNav />
             </DeskTopWrap>
@@ -45,7 +47,12 @@ const HomeLayout = () => {
                 <HomeSlider />
             </DeskTopWrap>
 
-        </div>
+
+            <ScrollList />
+            <ScrollList />
+            <ScrollList />
+            <ScrollList />
+        </>
     )
 
 }

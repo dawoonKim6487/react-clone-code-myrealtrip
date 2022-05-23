@@ -33,7 +33,7 @@ const Slide = ({ children, data }) => {
                 </h3>
                 <p className='hidden lg:block text-white text-xl'>{count}여 개의 여행 상품</p>
             </div>
-            <p>
+            <div>
                 <div className='hidden lg:block bg-white py-2 w-1/3 text-center rounded text-sm'>
                     둘러보기
                 </div>
@@ -42,7 +42,7 @@ const Slide = ({ children, data }) => {
                         격리없음
                     </SpanStyle>
                 }
-            </p>
+            </div>
         </SlideStyle>
     )
 }
