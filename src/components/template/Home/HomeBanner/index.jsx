@@ -1,8 +1,6 @@
 import React from 'react'
 import { AiOutlineRight } from "react-icons/ai";
 import Slider from './Slider';
-import { DeskTopWrap } from '@/styles'
-
 
 
 const HomeBanner = () => {

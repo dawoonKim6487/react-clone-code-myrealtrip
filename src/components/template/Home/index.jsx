@@ -47,11 +47,13 @@ const HomeLayout = () => {
                 <HomeSlider />
             </DeskTopWrap>
 
+            <DeskTopWrap>
+                <ScrollList id={1} />
+                <ScrollList id={2} />
+                <ScrollList id={3} />
+                <ScrollList id={4} />
+            </DeskTopWrap>
 
-            <ScrollList />
-            <ScrollList />
-            <ScrollList />
-            <ScrollList />
         </>
     )
 

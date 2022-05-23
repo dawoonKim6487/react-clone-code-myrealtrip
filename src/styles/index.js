@@ -11,4 +11,5 @@ export const DeskTopWrap = tw.div`
     lg:px-0
     max-w-[1200px]
     m-auto
+    my-5
 `
