@@ -1,5 +1,4 @@
 import React from 'react';
-import { DeskTopWrap } from '@/styles'
 import tw from 'tailwind-styled-components';
 
 const NavList = tw.li`
@@ -39,21 +38,19 @@ const MoNav = () => {
         { id: 14, title: '타이틀15', icon: '1' },
     ]
     return (
-        <DeskTopWrap>
-            <ul className='flex flex-wrap justify-between'>
-                {
-                    nav.map((ele) => {
-                        return (
-                            <NavList key={ele.id}>
-                                <NavIcon></NavIcon>
-                                <span className='text-sm'>{ele.title}</span>
-                            </NavList>
-                        )
-                    })
-                }
+        <ul className='flex flex-wrap justify-between'>
+            {
+                nav.map((ele) => {
+                    return (
+                        <NavList key={ele.id}>
+                            <NavIcon></NavIcon>
+                            <span className='text-sm'>{ele.title}</span>
+                        </NavList>
+                    )
+                })
+            }
 
-            </ul>
-        </DeskTopWrap>
+        </ul>
     )
 }
 

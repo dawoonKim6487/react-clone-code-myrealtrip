@@ -5,9 +5,13 @@ const SliderInner = tw.div`
     bg-slate-500
     h-[250px]
     rounded
-    py-10
-    px-16
-     flex flex-col justify-center
+    py-5
+    lg:py-10
+    px-8
+    lg:py-16
+    flex
+    flex-col
+    justify-center
 `
 
 const MoreBtn = tw.span`

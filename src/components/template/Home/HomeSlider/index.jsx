@@ -1,9 +1,8 @@
 import React from 'react';
-import { DeskTopWrap } from '@/styles'
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
 import Slide from './Slide';
 
 const HomeSlider = () => {
@@ -18,27 +17,27 @@ const HomeSlider = () => {
     }
 
     return (
-        <DeskTopWrap>
-            <Swiper
-                pagination={true}
-                modules={[Pagination, Autoplay]}
-                autoplay={autoOption}>
-                {
-                    slideData.map((ele) => {
-                        return (
+        <Swiper
+            pagination={true}
+            modules={[Pagination, Autoplay]}
+            autoplay={autoOption}>
+            {
+                slideData.map((ele) => {
+                    return (
+                        <>
                             <SwiperSlide
                             >
                                 <Slide key={ele.id}>
-                                    <h2 className='text-3xl text-white'>{ele.tit}</h2>
-                                    <p className='text-white'>{ele.desc}</p>
+                                    <h2 className='text-xl lg:text-3xl text-white'>{ele.tit}</h2>
+                                    <p className='text-white text-sm lg:text-xl'>{ele.desc}</p>
                                 </Slide>
                             </SwiperSlide>
+                        </>
 
-                        )
-                    })
-                }
-            </Swiper>
-        </DeskTopWrap>
+                    )
+                })
+            }
+        </Swiper>
     )
 
 }
