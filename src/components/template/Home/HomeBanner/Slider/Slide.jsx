@@ -3,7 +3,7 @@ import tw from 'tailwind-styled-components';
 
 const SlideStyle = tw.div`
     bg-slate-400
-    h-[175px]
+    h-[150px]
     lg:h-[350px]
     rounded-xl
     drop-shadow-md

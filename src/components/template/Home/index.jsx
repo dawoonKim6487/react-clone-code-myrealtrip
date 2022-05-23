@@ -3,6 +3,7 @@ import { Header, ModalWrap, ModalBar, MoSearchModal } from '@/components/common'
 import { SearchInput } from "@/components/common"
 import HomeBanner from './HomeBanner';
 import MoNav from './MoNav';
+import HomeSlider from './HomeSlider';
 
 const HomeLayout = () => {
     const [barOpen, setBarOpen] = useState(false)
@@ -31,6 +32,9 @@ const HomeLayout = () => {
             <HomeBanner />
             <div className='lg:hidden'>
                 <MoNav />
+            </div>
+            <div>
+                <HomeSlider />
             </div>
         </div>
     )
